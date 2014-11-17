@@ -1,0 +1,25 @@
+{
+  "name": "chillyBeer",
+  "version": "1.0.0",
+  "description": "chillyBeer ==========",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thewillhuang/chillyBeer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thewillhuang/chillyBeer/issues"
+  },
+  "homepage": "https://github.com/thewillhuang/chillyBeer",
+  "dependencies": {
+    "express": "^4.10.2",
+    "superagent": "^0.21.0",
+    "superagent-cli": "^1.2.0"
+  }
+}
