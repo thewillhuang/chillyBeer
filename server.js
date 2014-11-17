@@ -33,10 +33,9 @@ router.post('/api/:ip', function(req,res) {
   request
   .get(wUground+req.params.ip)
   .end(function(req,wData) {
-    console.log(wData);
     var parsedData = JSON.parse(wData.text);
     var temp = parsedData.current_observation.temp_f;
-    var loc = parseData.display_location.full;
+    var loc = parsedData.current_observation.display_location.full;
     var message = '';
     if (temp < 45) {
       message = 'YES, it is '+ temp +' degrees F in ' + loc;
