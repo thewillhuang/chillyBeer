@@ -31,19 +31,21 @@ router.get('/', function(req, res) {
 router.post('/api/:ip', function(req,res) {
   //sends a request to weather underground with specified ip address and get temp back
   request
-    .get(wUground+req.params.ip)
-    .end(function(req,wData) {
-        var parsedData = JSON.parse(wData.text);
-        var temp = parsedData.current_observation.temp_f;
-        var message = '';
-        if (temp < 45) {
-          message = 'YES';
-        } else {
-          message = 'DON\'T';
-        }
-        //sends the correct message.
-        res.send(message);
-    });
+  .get(wUground+req.params.ip)
+  .end(function(req,wData) {
+    console.log(wData);
+    var parsedData = JSON.parse(wData.text);
+    var temp = parsedData.current_observation.temp_f;
+    var loc = parseData.display_location.full;
+    var message = '';
+    if (temp < 45) {
+      message = 'YES, it is '+ temp +' degrees F in ' + loc;
+    } else {
+      message = 'DON\'T, it is '+ temp +' degrees F in ' + loc;
+    }
+          //sends the correct message.
+          res.send(message);
+        });
 });
 
 // START THE SERVER
