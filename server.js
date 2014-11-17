@@ -38,7 +38,7 @@ router.post('/api/:ip', function(req,res) {
     var loc = parsedData.current_observation.display_location.full;
     var message = '';
     if (temp < 45) {
-      message = 'YES, it is '+ temp +' degrees F in ' + loc;
+      message = 'It is '+ temp +' degrees F in ' + loc;
     } else {
       message = 'It is '+ temp +' degrees F in ' + loc + ' DON\'T';
     }
