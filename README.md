@@ -1,3 +1,4 @@
+https://travis-ci.org/thewillhuang/chillyBeer.svg
 chillyBeer
 ==========
 
