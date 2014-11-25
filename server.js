@@ -1,3 +1,4 @@
+'use strict';
 // BASE SETUP
 // ==============================================
 var express = require('express');
@@ -6,7 +7,7 @@ var port    = process.env.PORT || 3000;
 var path    = __dirname + '/public/';
 var request = require('superagent');
 var wUApi = process.env.WUAPI;
-var wUground = "http://api.wunderground.com/api/"+wUApi+"/conditions/q/autoip.json?geo_ip=";
+var wUground = 'http://api.wunderground.com/api/' + wUApi + '/conditions/q/autoip.json?geo_ip=';
 // ROUTES
 // ==============================================
 // get an instance of router
@@ -28,23 +29,23 @@ router.get('/', function(req, res) {
 });
 
 //post route.
-router.post('/api/:ip', function(req,res) {
+router.post('/api/:ip', function(req, res) {
   //sends a request to weather underground with specified ip address and get temp back
   request
-  .get(wUground+req.params.ip)
-  .end(function(req,wData) {
+  .get(wUground + req.params.ip)
+  .end(function(req, wData) {
     var parsedData = JSON.parse(wData.text);
     var temp = parsedData.current_observation.temp_f;
     var loc = parsedData.current_observation.display_location.full;
     var message = '';
     if (temp < 45) {
-      message = 'It is '+ temp +' degrees F in ' + loc;
+      message = 'It is ' + temp + ' degrees F in ' + loc;
     } else {
-      message = 'It is '+ temp +' degrees F in ' + loc + ' DON\'T';
+      message = 'It is ' + temp + ' degrees F in ' + loc + ' DON\'T';
     }
           //sends the correct message.
-          res.send(message);
-        });
+    res.send(message);
+  });
 });
 
 // START THE SERVER
