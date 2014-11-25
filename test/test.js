@@ -32,7 +32,7 @@ describe('should send out an api request to get current ip address', function() 
     });
   });
 
-  it('should make sure server call and google injection works', function(done) {
+  it('should be able to get ip address and return a valid message', function(done) {
     chai.request(server)
     .post('/api/' + ip)
     .end(function(err, res) {
