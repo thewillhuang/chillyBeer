@@ -41,7 +41,7 @@ router.post('/api/:ip', function(req, res) {
     if (temp < 45) {
       message = 'It is ' + temp + ' degrees F in ' + loc;
     } else {
-      message = 'It is ' + temp + ' degrees F in ' + loc + ' DON\'T';
+      message = 'It is ' + temp + ' degrees F in ' + loc + '. DON\'T';
     }
           //sends the correct message.
     res.send(message);
