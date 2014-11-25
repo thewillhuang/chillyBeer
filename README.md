@@ -1,4 +1,5 @@
-https://travis-ci.org/thewillhuang/chillyBeer.svg
+<img src='https://travis-ci.org/thewillhuang/chillyBeer.svg'></img>
+
 chillyBeer
 ==========
 
