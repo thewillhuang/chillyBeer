@@ -9,7 +9,6 @@
     "build": "grunt build:dev",
     "rejoice": "echo yay!",
     "start": "node server.js"
-  }
   },
   "repository": {
     "type": "git",
