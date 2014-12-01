@@ -1,4 +1,4 @@
-<img src='https://travis-ci.org/thewillhuang/chillyBeer.svg'></img>
+<img src='https://travis-ci.org/thewillhuang/chillyBeer.svg?branch=master'></img>
 
 chillyBeer
 ==========
