@@ -5,7 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt",
+    "postinstall": "npm run build && npm run rejoice",
+    "build": "grunt build:dev",
+    "rejoice": "echo yay!",
     "start": "node server.js"
+  }
   },
   "repository": {
     "type": "git",
