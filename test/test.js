@@ -11,6 +11,7 @@ chai.use(chaihttp);
 describe('should send out an api request to get current ip address', function() {
   var ip;
   it('should return location data', function(done) {
+    //due to the slow response of freegeoip, i have to modify the timeout so the test will pass.
     this.timeout(10000);
     request
     .get('https://freegeoip.net/json/')
@@ -33,6 +34,7 @@ describe('should send out an api request to get current ip address', function() 
   });
 
   it('should be able to get ip address and return a valid message', function(done) {
+    this.timeout(10000);
     chai.request(server)
     .post('/api/' + ip)
     .end(function(err, res) {

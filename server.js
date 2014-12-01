@@ -4,7 +4,7 @@
 var express = require('express');
 var app     = express();
 var port    = process.env.PORT || 3000;
-var path    = __dirname + '/public/';
+var path    = __dirname + '/build/';
 var request = require('superagent');
 var wUApi = process.env.WUAPI;
 var wUground = 'http://api.wunderground.com/api/' + wUApi + '/conditions/q/autoip.json?geo_ip=';
