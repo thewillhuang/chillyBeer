@@ -1,4 +1,4 @@
-  'use strict';
+'use strict';
 var $ = require('jquery');
 var randomColorHex = require('./random');
 var square = require('./squared');

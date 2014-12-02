@@ -9191,7 +9191,7 @@ return jQuery;
 }));
 
 },{}],2:[function(require,module,exports){
-  'use strict';
+'use strict';
 var $ = require("./../../bower_components/jquery/dist/jquery.js");
 var randomColorHex = require('./random');
 var square = require('./squared');

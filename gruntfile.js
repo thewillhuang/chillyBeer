@@ -16,12 +16,23 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-sass');
 
   grunt.initConfig({
-    clean: {
-        dev: {
-          src: ['build/']
+    sass: {
+      dist: {
+        options: {
+          includePaths: require('node-bourbon').includePaths
+        },
+        files: {
+          'public/css/main.css': 'public/css/main.scss'
         }
+      }
+    },
+    clean: {
+      dev: {
+        src: ['build/']
+      }
     },
 
     copy:{
@@ -70,8 +81,8 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build:dev', ['clean:dev', 'browserify:dev', 'copy:dev']);
+  grunt.registerTask('build:dev', ['clean:dev', 'sass', 'browserify:dev', 'copy:dev']);
   grunt.registerTask('build:test', ['browserify:test']);
   grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha']);
-  grunt.registerTask('default', ['test']);
+  grunt.registerTask('default', ['build:dev', 'build:test']);
 };
