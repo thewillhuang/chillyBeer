@@ -29,7 +29,7 @@
     "grunt-contrib-copy": "^0.7.0",
     "grunt-sass": "^0.16.1",
     "node-bourbon": "^1.2.3",
-    "superagent": "^0.21.0",
+    "superagent": "^0.21.0"
   },
   "devDependencies": {
     "chai": "^1.10.0",
@@ -45,6 +45,6 @@
     "grunt-sass": "^0.16.1",
     "grunt-simple-mocha": "^0.4.0",
     "mocha": "^2.0.1",
-    "superagent": "^0.21.0",
+    "superagent": "^0.21.0"
   }
 }
