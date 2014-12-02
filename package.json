@@ -29,6 +29,7 @@
     "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.7.0",
+    "node-sass": "^1.2.3",
     "superagent": "^0.21.0",
     "superagent-cli": "^1.2.0"
   },

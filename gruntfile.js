@@ -2,10 +2,12 @@
 
 module.exports = function(grunt) {
   var srcFiles = [
-  '*.js',
+  './*.js',
   'lib/**/*.js',
   'models/**/*.js',
-  'routes/**/*.js'
+  'routes/**/*.js',
+  'public/**/*.js',
+  'test/**/*test.js'
   ];
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -17,9 +19,9 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     clean: {
-      dev: {
-        src: ['build/']
-      }
+        dev: {
+          src: ['build/']
+        }
     },
 
     copy:{

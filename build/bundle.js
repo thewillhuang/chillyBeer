@@ -9191,7 +9191,7 @@ return jQuery;
 }));
 
 },{}],2:[function(require,module,exports){
-'use strict';
+  'use strict';
 var $ = require("./../../bower_components/jquery/dist/jquery.js");
 var randomColorHex = require('./random');
 var square = require('./squared');
@@ -9209,7 +9209,7 @@ $('div').css('background-color', randomColorHex());
 
 $('#square').append(square(4) + 'is the square of 4');
 
-},{"./../../bower_components/jquery/dist/jquery.js":1,"./random":3,"./squared":4}],3:[function(require,module,exports){
+},{"./../../bower_components/jquery/dist/jquery.js":1,"./random":3,"./squared":5}],3:[function(require,module,exports){
 'use strict';
 var random = function() {
   return '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -9219,10 +9219,16 @@ module.exports = random;
 
 },{}],4:[function(require,module,exports){
 'use strict';
+module.exports = function() {
+  return true;
+};
+
+},{}],5:[function(require,module,exports){
+'use strict';
 var square = function(num) {
   return num * num;
 };
 
 module.exports = square;
 
-},{}]},{},[2,3,4]);
+},{}]},{},[2,3,4,5]);

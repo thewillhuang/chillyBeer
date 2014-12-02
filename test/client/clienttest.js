@@ -1,18 +1,13 @@
 'use strict';
 var expect = require('chai').expect;
-var main = require('../../public/js/main');
-var sinon = require('sinon');
-var $ = require('jquery');
+var someFunc = require('../../public/js/some_func');
 
-describe('test for ajax with sinon', function() {
-  beforeEach(function(){
-    sinon.spy($, 'ajax');
-  });
-  afterEach(function(){
-    $.ajax.restore();
+describe('some test', function() {
+  it('should be true', function() {
+    expect(true).to.eql(true);
   });
 
-  it('should make an ajax call', function(){
-    main();
+  it('should also be true', function() {
+    expect(someFunc()).to.eql(true);
   });
 });
