@@ -5,9 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt",
-    "postinstall": "npm run build && npm run rejoice",
-    "build": "grunt build:dev",
-    "rejoice": "echo yay!",
+    "postinstall": "npm run build",
+    "build": "grunt",
     "start": "node server.js"
   },
   "repository": {
@@ -29,6 +28,7 @@
     "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.7.0",
+    "node-bourbon": "^1.2.3",
     "node-sass": "^1.2.3",
     "superagent": "^0.21.0",
     "superagent-cli": "^1.2.0"
