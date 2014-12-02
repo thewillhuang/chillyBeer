@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt",
     "postinstall": "npm run build && bower install",
-    "build": "grunt",
+    "build": "grunt build:dev",
     "start": "node server.js"
   },
   "repository": {

@@ -84,5 +84,5 @@ module.exports = function(grunt) {
   grunt.registerTask('build:dev', ['clean:dev', 'sass', 'browserify:dev', 'copy:dev']);
   grunt.registerTask('build:test', ['browserify:test']);
   grunt.registerTask('test', ['build:test', 'jshint', 'jscs', 'simplemocha']);
-  grunt.registerTask('default', ['build:dev']);
+  grunt.registerTask('default', ['test']);
 };
